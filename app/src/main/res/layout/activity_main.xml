@@ -8,10 +8,10 @@
     android:weightSum="1">
 
     <ImageView
-        android:src="@drawable/leaps"
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-         />
+        android:src="@drawable/achieve" />
 
 </LinearLayout>
