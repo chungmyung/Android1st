@@ -4,14 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.chungmyung.myapplication.MainActivity"
-    android:weightSum="1">
+    android:orientation="vertical"
+    tools:context="com.chungmyung.myapplication.MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <!--주석 처리 ;  Ctrl + / -->
+    <!--<ImageView-->
+    <!--android:id="@+id/imageView"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:scaleType="centerCrop"-->
+    <!--android:src="@drawable/achieve" />-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="48sp"
+        android:background="#ffaa9a"
+        android:text="Hello" />
+
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/achieve" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="48sp"
+        android:background="#ffaa9a"
+        android:text="World" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="48sp"
+        android:background="#ffaa9a"
+        android:text="World" />
 
 </LinearLayout>
