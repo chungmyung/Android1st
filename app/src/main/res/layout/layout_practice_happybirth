@@ -7,7 +7,22 @@
     android:orientation="vertical"
     tools:context="com.chungmyung.myapplication.MainActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/happy birthday" />
 
+    <TextView
+        android:text="Happy Birday Jin !"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        />
+    <TextView
+        android:text="From JS "
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        />
 
 </LinerLayout>
 
