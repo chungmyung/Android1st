@@ -1,0 +1,53 @@
+<?xm version = "1.0" encoding="utf-8"?><!--suppress ALL -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.chungmyung.myapplication.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="435dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sunset" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView"
+        android:background="#0c13d4"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:text="You're invited !"
+        android:textColor="#bfeae6"
+        android:textSize="24sp" />
+
+    <TextView
+
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_weight="0.1 "
+
+
+        android:background="#0c13d4"
+        android:paddingLeft="16dp"
+        android:text="bonfire at the beach !"
+        android:textColor="#bfeae6" />
+
+
+</LinerLayout>
+
+
+
+
+
