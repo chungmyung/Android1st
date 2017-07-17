@@ -16,7 +16,6 @@
         android:layout_centerInParent="true"
         android:scaleType="centerCrop"
         android:src="@drawable/achieve" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,7 +23,7 @@
         android:layout_toLeftOf="@+id/image_view"
         android:background="@android:color/holo_blue_light"
         android:text="왼쪽"
-        android:textSize="14dp"
+        android:textSize="14sp"
 
     <TextView
         android:layout_width="wrap_content"
@@ -33,7 +32,7 @@
         android:layout_toRightOf="@+id/image_view"
         android:background="@android:color/holo_blue_light"
         android:text="오른쪽"
-        android:textSize="14dp"
+        android:textSize="14sp"
 
 
         />

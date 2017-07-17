@@ -7,22 +7,29 @@
     android:orientation="vertical"
     tools:context="com.chungmyung.myapplication.MainActivity">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/happy birthday" />
-
     <TextView
         android:text="Happy Birday Jin !"
+        android:textSize="32sp"
         android:layout_width="match_parent"
-        android:layout_height="96dp"
-        />
-    <TextView
-        android:text="From JS "
-        android:layout_width="match_parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="72dp"
         android:layout_height="48dp"
         />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/happy_birthday" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="250sp"
+        android:text="From JS "
+        android:textSize="24sp"/>
+
 
 </LinerLayout>
 
