@@ -13,13 +13,13 @@
         android:src="@drawable/achieve" />
 
     <TextView
-        EndOf="@+id/image_view"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/image_view"
-        android:layout_toLeftOf=""
+        android:layout_toLeftOf="@+id/image_view"
         android:text="왼쪽"
-        android:textSize="48dp"
+        android:textSize="24dp"
 
 
         />
