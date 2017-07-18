@@ -29,13 +29,11 @@
         android:textSize="24sp" />
 
     <TextView
-
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView"
-        android:layout_weight="0.1 "
         android:background="#0c13d4"
         android:paddingLeft="16dp"
         android:text="bonfire at the beach !"

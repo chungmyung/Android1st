@@ -23,7 +23,7 @@
         android:layout_toLeftOf="@+id/image_view"
         android:background="@android:color/holo_blue_light"
         android:text="왼쪽"
-        android:textSize="14sp"
+        android:textSize="14sp"/>
 
     <TextView
         android:layout_width="wrap_content"
