@@ -5,22 +5,22 @@
 
     <TextView
         android:id="@+id/smart_text_view"
-        android:text="수원스마트앱"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#673ab7"
+        android:background="#d0c7e2"
+        android:text="수원스마트앱"
         android:textSize="24sp" />
+
     <TextView
-        android:text="왼쪽 연습"
-        android:id="@+id/left_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
         android:layout_alignParentTop="true"
-        android:layout_toStartOf="@id/smart_text_view" />
+        android:layout_toStartOf="@id/smart_text_view"
+        android:text="왼쪽 연습"
+        android:textSize="24sp" />
+
     <TextView
-        android:id="@+id/left_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/smart_text_view"
@@ -36,51 +36,48 @@
         android:background="#4caf50"
         android:text="hello"
         android:textSize="24sp" />
+
     <TextView
-        android:id="@+id/left_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="위쪽"
-        android:textSize="24sp"
         android:layout_above="@id/android_text_view"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:text="위쪽"
+        android:textSize="24sp" />
+
     <TextView
-        android:id="@+id/left_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/smart_text_view"
-        android:text="왼쪽"
-        android:textSize="24sp"
         android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@id/hello_text_view" />
+        android:layout_toStartOf="@id/hello_text_view"
+        android:text="왼쪽"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/android_text_view"
+        android:text="Android"
+        android:textSize="24sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:background="#2196f3"
-        android:text="Android"
-        android:textSize="24sp" />
-    <TextView
-        android:id="@+id/left_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/android_text_view"
-        android:layout_alignParentBottom="true"
-        android:text="오른쪽"
-        android:textSize="24sp" />
+        android:background="#2196f3"         />
 
     <TextView
-        android:id="@+id/left_text_view"
+        android:text="오른쪽"
+        android:textSize="24sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toStartOf="@id/left_text_view"
-        android:layout_above="@id/android_text_view"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/android_text_view"  />
+
+    <TextView
         android:text="위쪽"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/android_text_view"
+        android:layout_alignParentStart="true"     />
 
 
 </RelativeLayout>
