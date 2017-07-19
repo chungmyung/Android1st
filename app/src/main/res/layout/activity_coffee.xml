@@ -26,8 +26,8 @@
 
         <Button
             android:id="@+id/plus_button"
-            android:layout_width="30dp"
-            android:layout_height="31dp"
+            android:layout_width="48dp"
+            android:layout_height="32dp"
             android:layout_marginLeft="16dp"
             android:text="+"
             android:textSize="8sp"
@@ -49,8 +49,8 @@
 
         <Button
             android:id="@+id/minus_button"
-            android:layout_width="30dp"
-            android:layout_height="31dp"
+            android:layout_width="48dp"
+            android:layout_height="32dp"
             android:layout_marginLeft="8dp"
             android:text="-"
             android:textSize="8sp"
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
-        android:text="$5"
+        android:text="3000원"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold" />
@@ -85,7 +85,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:text="ORDER"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        />
 
 </LinearLayout>
 

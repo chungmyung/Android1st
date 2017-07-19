@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.chungmyung.myapplication.BasketballActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#75c4d2"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:text="Court Counter"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.01"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="24dp"
+            android:text="Team A"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:layout_gravity="center"
+            android:text="Team B"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.04">
+
+
+    <TextView
+        android:id="@+id/scorea_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="24dp"
+        android:layout_gravity="center"
+        android:text="0"
+        android:textSize="48sp"
+        />
+
+    <TextView
+        android:id="@+id/scoreb_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_gravity="center"
+        android:text="0"
+        android:textSize="48sp"
+        />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"       >
+
+        <Button
+            android:id="@+id/point3a_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+3 points"
+            android:textSize="8sp"
+            android:onClick="point3aButtonClicked"/>
+
+        <Button
+            android:id="@+id/point3b_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+3 points"
+            android:textSize="8sp"
+            android:onClick="point3bButtonClicked"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/point2a_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+2 points"
+            android:textSize="8sp"
+            android:onClick="point2aButtonClicked"/>
+
+        <Button
+            android:id="@+id/point2b_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+2 points"
+            android:textSize="8sp"
+            android:onClick="point2bButtonClicked"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/point1a_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+1 points"
+            android:textSize="8sp"
+            android:onClick="pointa1buttonClicked"/>
+
+        <Button
+            android:id="@+id/point1b_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+1 points"
+            android:textSize="8sp"
+            android:onClick="point1bButtonClicked"
+           />
+    </LinearLayout>
+
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_weight="0.05"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:text="Reset"
+            android:textSize="16sp"
+            android:onClick="resetButtonClicked"
+            />
+
+
+</LinearLayout>
+
+
+
+
