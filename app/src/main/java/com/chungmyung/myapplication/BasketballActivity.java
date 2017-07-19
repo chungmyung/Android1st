@@ -32,7 +32,7 @@ public class BasketballActivity extends AppCompatActivity {
 
     public void point3bButtonClicked(View view) {
         mScoreb+=3;
-        mScoreaTextView.setText("" + mScoreb);
+        mScorebTextView.setText("" + mScoreb);
     }
 
 
@@ -43,7 +43,7 @@ public class BasketballActivity extends AppCompatActivity {
 
     public void point2bButtonClicked(View view) {
         mScoreb+=2;
-        mScoreaTextView.setText("" + mScoreb);
+        mScorebTextView.setText("" + mScoreb);
     }
 
     public void pointa1buttonClicked(View view) {
@@ -53,7 +53,7 @@ public class BasketballActivity extends AppCompatActivity {
 
     public void point1bButtonClicked(View view) {
         mScoreb+=1;
-        mScoreaTextView.setText("" + mScoreb);
+        mScorebTextView.setText("" + mScoreb);
     }
 
     public void resetButtonClicked(View view) {

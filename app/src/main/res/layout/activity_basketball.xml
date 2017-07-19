@@ -88,17 +88,17 @@
             android:id="@+id/point3a_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="point3aButtonClicked"
             android:text="+3 points"
-            android:textSize="8sp"
-            android:onClick="point3aButtonClicked"/>
+            android:textSize="8sp" />
 
         <Button
             android:id="@+id/point3b_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="point3bButtonClicked"
             android:text="+3 points"
-            android:textSize="8sp"
-            android:onClick="point3bButtonClicked"/>
+            android:textSize="8sp" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -110,17 +110,17 @@
             android:id="@+id/point2a_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="point2aButtonClicked"
             android:text="+2 points"
-            android:textSize="8sp"
-            android:onClick="point2aButtonClicked"/>
+            android:textSize="8sp" />
 
         <Button
             android:id="@+id/point2b_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="point2bButtonClicked"
             android:text="+2 points"
-            android:textSize="8sp"
-            android:onClick="point2bButtonClicked"/>
+            android:textSize="8sp" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -140,10 +140,9 @@
             android:id="@+id/point1b_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+1 points"
-            android:textSize="8sp"
             android:onClick="point1bButtonClicked"
-           />
+            android:text="+1 points"
+            android:textSize="8sp" />
     </LinearLayout>
 
 
