@@ -4,22 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.chungmyung.myapplication.MainActivity">
-
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="435dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/sunset" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="72dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/imageView"
+        android:layout_gravity="center_horizontal"
         android:background="#0c13d4"
         android:paddingLeft="16dp"
         android:paddingStart="16dp"
@@ -28,14 +22,23 @@
         android:textColor="#bfeae6"
         android:textSize="24sp" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:src="@drawable/sunset"
+        android:layout_gravity="center_horizontal"/>
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_alignParentStart="true"
+        android:layout_height="72dp"
         android:layout_below="@+id/textView"
+        android:paddingTop="16dp"
         android:background="#0c13d4"
-        android:paddingLeft="16dp"
+        android:padding="16dp"
+        android:paddingLeft="48dp"
         android:text="bonfire at the beach !"
         android:textColor="#bfeae6" />
 

@@ -1,45 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.chungmyung.myapplication.CoffeeActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    >
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context="com.chungmyung.myapplication.CoffeeActivity">
+    android:paddingLeft="16dp"
+    >
+
+    <EditText
+        android:id="@+id/name_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="주문자" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:text="Toppings"
+        android:textAllCaps="true" />
+
+    <CheckBox
+        android:id="@+id/whipped_cream_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="onCheckBoxClicked"
+        android:paddingLeft="8dp"
+        android:paddingStart="8dp"
+        android:text="휘핑크림"
+        android:textSize="16sp" />
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="quantity"
+        android:textAllCaps="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Price"
         android:textAllCaps="true"
         android:textSize="16sp" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:baselineAligned="true"
-        android:orientation="horizontal"
         android:layout_marginTop="16dp"
-        android:gravity="center">
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/plus_button"
             android:layout_width="48dp"
-            android:layout_height="32dp"
-            android:layout_marginLeft="16dp"
-            android:text="+"
-            android:textSize="8sp"
+            android:layout_height="48dp"
             android:onClick="plusButtonClicked"
-            />
+            android:text="+"
+            android:textSize="8sp" />
 
         <TextView
             android:id="@+id/quantity_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
-           android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:text="1"
@@ -50,29 +86,18 @@
         <Button
             android:id="@+id/minus_button"
             android:layout_width="48dp"
-            android:layout_height="32dp"
+            android:layout_height="48dp"
             android:layout_marginLeft="8dp"
+            android:onClick="minusButtonClicked"
             android:text="-"
-            android:textSize="8sp"
-            android:onClick="minusButtonClicked"/>
+            android:textSize="8sp" />
 
     </LinearLayout>
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Price"
-        android:textSize="16sp"
-        android:textAllCaps="true"/>
 
     <TextView
         android:id="@+id/price_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         android:text="3000원"
         android:textColor="@android:color/black"
@@ -82,11 +107,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:text="ORDER"
-        android:textSize="16sp"
-        />
+        android:textSize="16sp" />
 
 </LinearLayout>
 
+</ScrollView>

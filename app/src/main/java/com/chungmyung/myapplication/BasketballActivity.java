@@ -59,8 +59,8 @@ public class BasketballActivity extends AppCompatActivity {
 
     public void resetButtonClicked(View view) {
         mScorea = 0;
-        mScoreb = 0;
         mScoreaTextView.setText("" + mScorea);
+        mScoreb = 0;
         mScorebTextView.setText("" + mScorea);
     }
 }
