@@ -23,6 +23,17 @@ public class TargetActivity extends AppCompatActivity {
     }
 
     public void onFinshButtonClicked(View view) {
+        //나이를 돌려주자
+        Intent intent = new Intent();
+        intent.putExtra("age",28);
+        setResult(RESULT_OK,intent);
+
+        //성공
+//        setResult(RESULT_OK);
+//        //실패
+//        setResult(RESULT_CANCELED);
+
+
         // 액티비티 종료
         finish();
     }
