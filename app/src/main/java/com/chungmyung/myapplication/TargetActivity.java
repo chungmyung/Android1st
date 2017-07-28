@@ -32,8 +32,6 @@ public class TargetActivity extends AppCompatActivity {
 //        setResult(RESULT_OK);
 //        //실패
 //        setResult(RESULT_CANCELED);
-
-
         // 액티비티 종료
         finish();
     }

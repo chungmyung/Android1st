@@ -1,7 +1,11 @@
 package com.chungmyung.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -44,8 +48,12 @@ public class CoffeeActivity extends AppCompatActivity {
 //      mQuantityTextView.setText(String.valueOf(mQuantity));
         display();
 
-    }
+        if (getIntent() != null) {
+            String message = getIntent().getStringExtra(Intent.EXTRA_TEXT);
+            mNameEditText.setText(message);
 
+        }
+    }
     private void display() {
         mQuantityTextView.setText("" + mQuantity);
 
@@ -79,8 +87,35 @@ public class CoffeeActivity extends AppCompatActivity {
     }
 
     public void onCheckBoxClicked(View view) {
-        CheckBox checkBox = (CheckBox) view;
+//        CheckBox checkBox = (CheckBox) view;
 //        Toast.makeText(this, "잘되나?" + checkBox.isChecked(), Toast.LENGTH_SHORT).show();
         display();
     }
+
+    @Override
+    public boolean onCreateOptionsMenu (Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_coffee,menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.action_item1:
+                return true;
+            case R.id.action_item2:
+                return true;
+            case R.id.action_item3:
+                return true;
+            case R.id.action_item4:
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 }
+
+
+
