@@ -37,7 +37,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginRight="24dp"
             android:text="Team A"
             android:textColor="@android:color/darker_gray"
             android:textSize="24sp" />
@@ -82,7 +81,7 @@
     <view
         android:layout_width="3dp"
         android:layout_height="match_parent"
-        android:background="@android:color/darker_gray" />
+        android:background="#100000" />
 
     //Team B
 
@@ -107,8 +106,6 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:gravity="center"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="24dp"
             android:text="0"
             android:textSize="48sp" />
 
