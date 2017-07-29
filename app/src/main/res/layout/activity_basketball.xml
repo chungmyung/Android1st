@@ -19,142 +19,151 @@
         android:textStyle="bold" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    // Team A
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="0.01"
-        android:orientation="horizontal">
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:gravity="center"
             android:layout_marginRight="24dp"
             android:text="Team A"
             android:textColor="@android:color/darker_gray"
-            android:textSize="16sp" />
+            android:textSize="24sp" />
 
         <TextView
-
+            android:id="@+id/scorea_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="48dp"
-            android:layout_gravity="center"
-            android:text="Team B"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="16sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_gravity="center"
-        android:layout_weight="0.04">
-
-
-    <TextView
-        android:id="@+id/scorea_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="24dp"
-        android:layout_gravity="center"
-        android:text="0"
-        android:textSize="48sp"
-        />
-
-        <TextView
-            android:id="@+id/scoreb_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="100dp"
+            android:layout_height="150dp"
+            android:gravity="center"
             android:text="0"
             android:textSize="48sp" />
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"       >
 
         <Button
             android:id="@+id/point3a_button"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="point3aButtonClicked"
             android:text="+3 points"
-            android:textSize="8sp" />
-
-        <Button
-            android:id="@+id/point3b_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="point3bButtonClicked"
-            android:text="+3 points"
-            android:textSize="8sp" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_gravity="center">
+            android:textSize="16sp"
+            android:backgroundTint="#ffab40"/>
 
         <Button
             android:id="@+id/point2a_button"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="point2aButtonClicked"
             android:text="+2 points"
-            android:textSize="8sp" />
-
-        <Button
-            android:id="@+id/point2b_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="point2bButtonClicked"
-            android:text="+2 points"
-            android:textSize="8sp" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_gravity="center">
+            android:textSize="16sp"
+            android:backgroundTint="#ffab40" />
 
         <Button
             android:id="@+id/point1a_button"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="pointa1buttonClicked"
             android:text="+1 points"
-            android:textSize="8sp"
-            android:onClick="pointa1buttonClicked"/>
+            android:textSize="16sp"
+            android:backgroundTint="#ffab40" />
+
+    </LinearLayout>
+
+    <view
+        android:layout_width="3dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray" />
+
+    //Team B
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp">>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Team B"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/scoreb_text"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="24dp"
+            android:text="0"
+            android:textSize="48sp" />
+
+        <Button
+            android:id="@+id/point3b_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="point3bButtonClicked"
+            android:text="+3 points"
+            android:textSize="16sp"
+            android:backgroundTint="#ffab40" />
+
+
+        <Button
+            android:id="@+id/point2b_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="point2bButtonClicked"
+            android:text="+2 points"
+            android:textSize="16sp"
+            android:backgroundTint="#ffab40" />
+
 
         <Button
             android:id="@+id/point1b_button"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="point1bButtonClicked"
             android:text="+1 points"
-            android:textSize="8sp" />
+            android:textSize="16sp"
+            android:backgroundTint="#ffab40" />
+
+    </LinearLayout>
     </LinearLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        >
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="64dp"
+        android:onClick="resetButtonClicked"
+        android:text="Reset"
+        android:textSize="16sp"
+        android:backgroundTint="#ffab40" />
 
-        <Button
-            android:id="@+id/reset_button"
-            android:layout_weight="0.05"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="24dp"
-            android:text="Reset"
-            android:textSize="16sp"
-            android:onClick="resetButtonClicked"
-            />
+    </RelativeLayout>
+
 
 
 </LinearLayout>

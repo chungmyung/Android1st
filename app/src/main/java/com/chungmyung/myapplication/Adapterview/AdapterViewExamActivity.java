@@ -144,6 +144,14 @@ public class AdapterViewExamActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_item1:
                 Toast.makeText(this, "action 1", Toast.LENGTH_SHORT).show();
+                // 삭제
+                mPeopleData.remove(info.position);
+                // 업데이트
+                mAdapter.notifyDataSetChanged();
+
+                return true;
+            case R.id.action_item2:
+                Toast.makeText(this, "action 1", Toast.LENGTH_SHORT).show();
 
                 //물어보자 AlertDialog
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -152,15 +160,8 @@ public class AdapterViewExamActivity extends AppCompatActivity {
 
                 builder.create().show();
 
-
-
-                // 삭제
-                mPeopleData.remove(info.position);
-                // 업데이트
-                mAdapter.notifyDataSetChanged();
-
                 return true;
-            case R.id.action_item2:
+            case R.id.action_item3:
                 Toast.makeText(this, "action 2", Toast.LENGTH_SHORT).show();
                 return true;
             default:
