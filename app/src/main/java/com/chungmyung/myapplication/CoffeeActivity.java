@@ -45,7 +45,7 @@ public class CoffeeActivity extends AppCompatActivity {
         mNameEditText = (EditText) findViewById(R.id.name_edit);
 
 
-//      mQuantityTextView.setText(String.valueOf(mQuantity));
+//        mQuantityTextView.setText(String.valueOf(mQuantity));
         display();
 
         if (getIntent() != null) {
@@ -54,6 +54,7 @@ public class CoffeeActivity extends AppCompatActivity {
 
         }
     }
+
     private void display() {
         mQuantityTextView.setText("" + mQuantity);
 
@@ -93,11 +94,12 @@ public class CoffeeActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu (Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_coffee,menu);
+        inflater.inflate(R.menu.menu_coffee, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection

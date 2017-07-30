@@ -92,13 +92,19 @@
             android:textSize="8sp" />
 
     </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Price"
+        android:textAllCaps="true"/>
 
     <TextView
         android:id="@+id/price_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="3000원"
+        android:text="0원"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold" />

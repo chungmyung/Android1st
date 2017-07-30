@@ -1,6 +1,7 @@
 package com.chungmyung.myapplication.Adapterview;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -23,8 +24,7 @@ import com.chungmyung.myapplication.R;
 
 import java.util.ArrayList;
 
-
-public class AdapterViewExamActivity extends AppCompatActivity {
+public class AdapterViewExamActivity extends AppCompatActivity implements DialogInterface.OnClickListener {
     private static final String TAG = AdapterViewExamActivity.class.getSimpleName();
     private ArrayList<People> mPeopleData;
     private PeopleAdapter mAdapter;
@@ -45,7 +45,7 @@ public class AdapterViewExamActivity extends AppCompatActivity {
         ArrayList<People> data = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
             People people = new People("홍길동" + i, "전화번호 " + i,
-                    "이메일" + i , R.drawable.achieve + i);
+                    "이메일" + i, R.drawable.achieve + i);
             data.add(people);
         }
 
@@ -130,6 +130,7 @@ public class AdapterViewExamActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v,
                                     ContextMenu.ContextMenuInfo menuInfo) {
@@ -140,16 +141,13 @@ public class AdapterViewExamActivity extends AppCompatActivity {
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
-        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        final AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+
         switch (item.getItemId()) {
             case R.id.action_item1:
                 Toast.makeText(this, "action 1", Toast.LENGTH_SHORT).show();
-                // 삭제
-                mPeopleData.remove(info.position);
-                // 업데이트
-                mAdapter.notifyDataSetChanged();
-
                 return true;
+
             case R.id.action_item2:
                 Toast.makeText(this, "action 1", Toast.LENGTH_SHORT).show();
 
@@ -158,9 +156,27 @@ public class AdapterViewExamActivity extends AppCompatActivity {
                 builder.setTitle("삭제");
                 builder.setMessage("정말로 삭제하시겠습니까 ?");
 
+                //바깥부분 클릭했을때  닫기
+                builder.setCancelable(false);
+                // 무명 클래스
+                builder.setPositiveButton("삭제", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // 삭제
+                        mPeopleData.remove(info.position);
+                        // 업데이트
+                        mAdapter.notifyDataSetChanged();
+
+                    }
+                });
+                builder.setNegativeButton("아니오", null);
+                builder.setIcon(R.drawable.achieve);
+
                 builder.create().show();
 
+
                 return true;
+
             case R.id.action_item3:
                 Toast.makeText(this, "action 2", Toast.LENGTH_SHORT).show();
                 return true;
@@ -182,4 +198,14 @@ public class AdapterViewExamActivity extends AppCompatActivity {
         // 뒤로 가기
         super.onBackPressed();
     }
- }
+
+    @Override
+    public void onClick(DialogInterface dialog, int which) {
+        switch (which) {
+            case DialogInterface.BUTTON_POSITIVE:
+                break;
+            case DialogInterface.BUTTON_NEGATIVE:
+                break;
+        }
+    }
+}
