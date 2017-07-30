@@ -174,7 +174,6 @@ public class AdapterViewExamActivity extends AppCompatActivity implements Dialog
 
                 builder.create().show();
 
-
                 return true;
 
             case R.id.action_item3:
