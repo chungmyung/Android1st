@@ -15,7 +15,7 @@ public class DialogUtil {
                      DialogInterface.OnClickListener listener) {
 
         //물어보자 AlertDialog
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle("삭제");
         builder.setMessage("정말로 삭제하시겠습니까 ?");
 
