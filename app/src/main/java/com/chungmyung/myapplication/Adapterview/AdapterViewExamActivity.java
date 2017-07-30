@@ -21,6 +21,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.chungmyung.myapplication.R;
+import com.chungmyung.myapplication.Util.DialogUtil;
 
 import java.util.ArrayList;
 
@@ -150,38 +151,47 @@ public class AdapterViewExamActivity extends AppCompatActivity implements Dialog
 
             case R.id.action_item2:
                 Toast.makeText(this, "action 1", Toast.LENGTH_SHORT).show();
-
-                //물어보자 AlertDialog
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle("삭제");
-                builder.setMessage("정말로 삭제하시겠습니까 ?");
-
-                //바깥부분 클릭했을때  닫기
-                builder.setCancelable(false);
-                // 무명 클래스
-                builder.setPositiveButton("삭제", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // 삭제
-                        mPeopleData.remove(info.position);
-                        // 업데이트
-                        mAdapter.notifyDataSetChanged();
-
-                    }
-                });
-                builder.setNegativeButton("아니오", null);
-                builder.setIcon(R.drawable.achieve);
-
-                builder.create().show();
+                showcustomDialog();
 
                 return true;
 
             case R.id.action_item3:
                 Toast.makeText(this, "action 2", Toast.LENGTH_SHORT).show();
+
                 return true;
             default:
                 return super.onContextItemSelected(item);
         }
+    }
+
+    private void showcustomDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        View view = getLayoutInflater().inflate(R.layout.diallog_signin, null, false);
+
+        builder.setPositiveButton("예", null);
+        builder.setNegativeButton("아니오", null);
+        builder.setView(view);
+        builder.create().show();
+    }
+
+    private void showDefaultDialog(final AdapterView.AdapterContextMenuInfo info) {
+
+        DialogUtil.creatAlertDialog(this, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                switch (which) {
+                    case DialogInterface.BUTTON_POSITIVE:
+                        // 삭제
+                        mPeopleData.remove(info.position);
+                        // 업데이트
+                        mAdapter.notifyDataSetChanged();
+                        break;
+                    case DialogInterface.BUTTON_NEGATIVE:
+                        break;
+                }
+            }
+        }).show();
     }
 
     @Override
