@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import com.chungmyung.myapplication.R;
 import com.chungmyung.myapplication.Util.DialogUtil;
+import com.chungmyung.myapplication.Util.SharedPreferenceUtil;
 
 import java.util.ArrayList;
 
@@ -94,9 +95,10 @@ public class AdapterViewExamActivity extends AppCompatActivity implements Dialog
         //Context 메뉴 연결
         registerForContextMenu(mListView);
 
+        String weather = SharedPreferenceUtil.restoreWeather(this);
         // SharedPreference 데이터 복원
-        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
-        String weather = settings.getString("weather", "맑음");
+//        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
+//        String weather = settings.getString("weather", "맑음");
 
         mWeatherEditText = (EditText) findViewById(R.id.weather_edit);
         mWeatherEditText.setText(weather);

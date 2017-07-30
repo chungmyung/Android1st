@@ -26,6 +26,5 @@ public class DialogUtil {
         builder.setNegativeButton("아니오", listener);
 
         return builder.create();
-
     }
 }
