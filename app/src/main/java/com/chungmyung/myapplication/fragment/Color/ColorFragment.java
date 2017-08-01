@@ -34,19 +34,18 @@ public class ColorFragment extends Fragment {
         return fragment;
     }
 
+    public static ColorFragment newInstance() {
 
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
+        Bundle args = new Bundle();
         int r = new Random().nextInt(256);
         int g = new Random().nextInt(256);
         int b = new Random().nextInt(256);
         int color = Color.argb(255, r, g, b);
+        args.putInt("color",color);
 
-        // Acitivity에서 넘긴 것을  받을땐 getArgument로 받는다.
-        color = getArguments().getInt("color");
-        view.setBackgroundColor(color);
+        ColorFragment fragment = new ColorFragment();
+        fragment.setArguments(args);
+        return fragment;
     }
 
     @Override
@@ -55,6 +54,23 @@ public class ColorFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_color, container, false);
     }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+
+//   new Instance기능으로 못쓰게 된 코딩.
+//        int r = new Random().nextInt(256);
+//        int g = new Random().nextInt(256);
+//        int b = new Random().nextInt(256);
+//        int color = Color.argb(255, r, g, b);
+
+        // Acitivity에서 넘긴 것을  받을땐 getArgument로 받는다.
+       int color = getArguments().getInt("color");
+        view.setBackgroundColor(color);
+    }
+
 
 
 }

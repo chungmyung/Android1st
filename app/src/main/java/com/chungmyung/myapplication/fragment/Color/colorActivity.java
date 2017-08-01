@@ -7,7 +7,7 @@ import android.view.View;
 
 import com.chungmyung.myapplication.R;
 
-public class colerActivity extends AppCompatActivity {
+public class colorActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +55,19 @@ public class colerActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container, fragment)
                 .commit();
+
+    }
+
+    public void onCreateRandomFragmentButtonClicked(View view) {
+
+        ColorFragment fragment =ColorFragment.newInstance();
+
+        // R.id.container영역에 프래그먼트를 교체하겠다.
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.container, fragment)
+                .commit();
+
+
 
     }
 }
