@@ -1,9 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.chungmyung.myapplication.fragment.basketball.BasketBallActivity">
+    android:orientation="vertical"
+    tools:context=".fragment.Basket.BasketBallActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <fragment
+            android:id="@+id/frag_team_a"
+            android:name="com.chungmyung.myapplication.fragment.Basket.BasketScoreFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_basket_ball" />
+
+        <fragment
+            android:id="@+id/frag_team_b"
+            android:name="com.chungmyung.myapplication.fragment.Basket.BasketScoreFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_basket_ball" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:onClick="onResetButtonClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:text="RESET"/>
+
+
+</LinearLayout>
