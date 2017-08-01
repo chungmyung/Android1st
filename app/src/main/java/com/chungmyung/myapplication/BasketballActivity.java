@@ -19,48 +19,76 @@ public class BasketballActivity extends AppCompatActivity {
         setContentView(R.layout.activity_basketball);
 
         mScoreaTextView = (TextView) findViewById(R.id.scorea_text);
-        mScoreaTextView.setText("" + mScorea);
         mScorebTextView = (TextView) findViewById(R.id.scoreb_text);
-        mScorebTextView.setText("" + mScoreb);
+
+
+        if (savedInstanceState != null) {
+            // 복원
+            mScorea = savedInstanceState.getInt("a");
+            mScoreb = savedInstanceState.getInt("b");
+
+            mScoreaTextView.setText("" + mScorea);
+            mScorebTextView.setText("" + mScoreb);
+        }
     }
 
+    public void onButtonClicked(View view) {
+        switch (view.getId()) {
+            case R.id.point1a_button:
+                mScorea++;
+                break;
+            case R.id.point2a_button:
+                mScorea += 2;
+                break;
+            case R.id.point3a_button:
+                mScorea += 3;
+                break;
+            case R.id.point1b_button:
+                mScoreb++;
+                break;
+            case R.id.point2b_button:
+                mScoreb += 2;
+                break;
+            case R.id.point3b_button:
+                mScoreb += 3;
+                break;
+            case R.id.reset_button:
+                mScorea = 0;
+                mScoreb = 0;
+                break;
+        }
 
-    public void point3aButtonClicked(View view) {
-        mScorea+=3;
         mScoreaTextView.setText("" + mScorea);
-    }
-
-    public void point3bButtonClicked(View view) {
-        mScoreb+=3;
         mScorebTextView.setText("" + mScoreb);
+
+
+//    public void resetButtonClicked(View view) {
+//        mScorea = 0;
+//        mScoreaTextView.setText("" + mScorea);
+//        mScoreb = 0;
+//        mScorebTextView.setText("" + mScorea);
+//    }
+
     }
 
+        @Override
+        protected void onSaveInstanceState (Bundle outState){
+            // 저장
+            outState.putInt("a", mScorea);
+            outState.putInt("b", mScoreb);
 
-    public void point2aButtonClicked(View view) {
-        mScorea+=2;
-        mScoreaTextView.setText("" + mScorea);
-    }
+            super.onSaveInstanceState(outState);
+        }
 
-    public void point2bButtonClicked(View view) {
-        mScoreb+=2;
-        mScorebTextView.setText("" + mScoreb);
-    }
+        @Override
+        protected void onRestoreInstanceState (Bundle savedInstanceState){
+            super.onRestoreInstanceState(savedInstanceState);
 
-    public void pointa1buttonClicked(View view) {
-        mScorea+=1;
-        mScoreaTextView.setText("" + mScorea);
-    }
+            // 복원
+            mScorea = savedInstanceState.getInt("a");
+            mScoreb = savedInstanceState.getInt("b");
 
-    public void point1bButtonClicked(View view) {
-        mScoreb+=1;
-        mScorebTextView.setText("" + mScoreb);
-    }
-
-
-    public void resetButtonClicked(View view) {
-        mScorea = 0;
-        mScoreaTextView.setText("" + mScorea);
-        mScoreb = 0;
-        mScorebTextView.setText("" + mScorea);
-    }
+            mScoreaTextView.setText("" + mScorea);
+            mScorebTextView.setText("" + mScoreb);
+        }
 }

@@ -44,7 +44,7 @@
         <TextView
             android:id="@+id/scorea_text"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="120dp"
             android:gravity="center"
             android:text="0"
             android:textSize="48sp" />
@@ -53,7 +53,7 @@
             android:id="@+id/point3a_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="point3aButtonClicked"
+            android:onClick="onButtonClicked"
             android:text="+3 points"
             android:textSize="16sp"
             android:backgroundTint="#ffab40"/>
@@ -62,7 +62,7 @@
             android:id="@+id/point2a_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="point2aButtonClicked"
+            android:onClick="onButtonClicked"
             android:text="+2 points"
             android:textSize="16sp"
             android:backgroundTint="#ffab40" />
@@ -71,14 +71,14 @@
             android:id="@+id/point1a_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="pointa1buttonClicked"
+            android:onClick="onButtonClicked"
             android:text="+1 points"
             android:textSize="16sp"
             android:backgroundTint="#ffab40" />
 
     </LinearLayout>
 
-    <view
+    <View
         android:layout_width="3dp"
         android:layout_height="match_parent"
         android:background="#100000" />
@@ -104,7 +104,7 @@
         <TextView
             android:id="@+id/scoreb_text"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="120dp"
             android:gravity="center"
             android:text="0"
             android:textSize="48sp" />
@@ -113,7 +113,7 @@
             android:id="@+id/point3b_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="point3bButtonClicked"
+            android:onClick="onButtonClicked"
             android:text="+3 points"
             android:textSize="16sp"
             android:backgroundTint="#ffab40" />
@@ -123,7 +123,7 @@
             android:id="@+id/point2b_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="point2bButtonClicked"
+            android:onClick="onButtonClicked"
             android:text="+2 points"
             android:textSize="16sp"
             android:backgroundTint="#ffab40" />
@@ -133,7 +133,7 @@
             android:id="@+id/point1b_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="point1bButtonClicked"
+            android:onClick="onButtonClicked"
             android:text="+1 points"
             android:textSize="16sp"
             android:backgroundTint="#ffab40" />
@@ -154,7 +154,7 @@
         android:layout_height="48dp"
         android:layout_gravity="bottom"
         android:layout_marginTop="64dp"
-        android:onClick="resetButtonClicked"
+        android:onClick="onButtonClicked"
         android:text="Reset"
         android:textSize="16sp"
         android:backgroundTint="#ffab40" />
