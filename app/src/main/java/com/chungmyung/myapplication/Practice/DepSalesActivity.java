@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.chungmyung.myapplication.R;
 
@@ -27,6 +28,15 @@ public class DepSalesActivity extends AppCompatActivity implements View.OnClickL
                 finish();
             }
         });
+
+        if (getIntent() != null){
+            String id = getIntent().getStringExtra("id");
+            String password = getIntent().getStringExtra("password");
+            Toast.makeText(this,  id + ", " + password ,Toast.LENGTH_SHORT).show();
+        }
+
+
+
     }
 
     @Override
