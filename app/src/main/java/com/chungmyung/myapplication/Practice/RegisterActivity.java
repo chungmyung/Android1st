@@ -41,9 +41,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             case R.id.new_member_text:
                 newmeber();
                 break;
-
         }
-
     }
 
     private void newmeber() {
@@ -56,7 +54,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         intent.putExtra("id", mIdEditText.getText().toString());
         intent.putExtra("passWord", mPasswordEditText.getText().toString());
         startActivityForResult(intent, REQUEST_CODE_LOGIN);
-
     }
 
 
@@ -70,7 +67,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 String text = data.getStringExtra("text");
                 Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
 
-            } else if (requestCode == REQUEST_CODE_NEWMEMBER) {
+            } else if (requestCode == REQUEST_CODE_NEWMEMBER &&
+                       data == null) {
                 Toast.makeText(this, "가입 잘되었음", Toast.LENGTH_SHORT).show();
             }
         }
