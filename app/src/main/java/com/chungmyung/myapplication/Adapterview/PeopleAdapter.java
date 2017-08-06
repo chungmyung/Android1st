@@ -94,7 +94,7 @@ public class PeopleAdapter extends BaseAdapter {
         holder.image.setImageResource(picture);
         holder.name.setText(people.getName());
         holder.phone.setText(people.getPhone());
-        holder.email.setText(people.getPhone());
+        holder.email.setText(people.getEmail());
 
         return convertView;
     }

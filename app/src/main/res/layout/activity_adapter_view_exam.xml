@@ -9,31 +9,30 @@
 
     <EditText
         android:id="@+id/weather_edit"
-        android:hint="오늘의 날씨"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:hint="오늘의 날씨" />
 
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        tools:listitem="@layout/item_exam"
-                />
+        tools:listitem="@layout/item_exam" />
+
     <GridView
-        android:visibility="gone"
         android:id="@+id/grid_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:numColumns="3"
-              />
+        android:visibility="gone" />
+
     <Spinner
-        android:visibility="visible"
         android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-              />
+        android:visibility="visible" />
 
 </LinearLayout>
 

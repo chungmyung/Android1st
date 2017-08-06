@@ -12,7 +12,7 @@ public class colorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_coler);
+        setContentView(R.layout.activity_color);
     }
 
 
@@ -23,7 +23,7 @@ public class colorActivity extends AppCompatActivity {
 
         //프래그먼트에게 넘겨주기위해선   Bundle에다 넘겨야 한다. 위의 coding으로 없어지는 부분
 //        Bundle bundle = new Bundle();
-//        bundle.putInt("color", Color.RED);
+//        bundle.putInt("activity_color", Color.RED);
 //        bundle.putString("name", "어쩌구");
 //        fragment.setArguments(bundle);
 

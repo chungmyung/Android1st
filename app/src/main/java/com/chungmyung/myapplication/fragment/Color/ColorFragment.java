@@ -64,7 +64,7 @@ public class ColorFragment extends Fragment {
 //        int r = new Random().nextInt(256);
 //        int g = new Random().nextInt(256);
 //        int b = new Random().nextInt(256);
-//        int color = Color.argb(255, r, g, b);
+//        int activity_color = Color.argb(255, r, g, b);
 
         // Acitivity에서 넘긴 것을  받을땐 getArgument로 받는다.
        int color = getArguments().getInt("color");

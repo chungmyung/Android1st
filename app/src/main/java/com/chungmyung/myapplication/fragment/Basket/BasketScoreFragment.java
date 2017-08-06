@@ -1,5 +1,7 @@
 package com.chungmyung.myapplication.fragment.Basket;
 
+import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -15,10 +17,42 @@ import com.chungmyung.myapplication.R;
  */
 
 public class BasketScoreFragment extends Fragment implements View.OnClickListener {
+
+
+    public void warning() {
+        getView().setBackgroundColor(Color.RED);
+    }
+
+
+    public interface OnWarningListener { void onWarning(String teamName);   }
+
     private TextView mScoreTextView;
     private TextView mTeamNameTextView;
     private int mScore;
 
+    private OnWarningListener mListener;  // 인터페이스로 연결됨
+    // private BasketBallActivity mAcitivity;  // Class연결되어 않좋음
+
+    // attach를 하는 순간 붙는 context
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+
+        // 액티비티와 연결된 8월 3일-- fragment 쓰기 위해
+        if (context instanceof OnWarningListener){
+            mListener= (OnWarningListener) context;
+        } else {
+            throw new RuntimeException( context.toString()
+            + "OnWarningListener를 구현해 주세요");
+
+        }
+
+
+    //    mActivity = (BasketBallActivity) context; //class로 연결되어 내부적으로 다르게 동작함.
+
+        //직접 사용이 아님 interface로 연결해야 함..엑티비티와 연결됨
+         mListener = (OnWarningListener) context;
+    }
 
     //뷰를 만드는 곳
     @Nullable
@@ -67,6 +101,10 @@ public class BasketScoreFragment extends Fragment implements View.OnClickListene
                 mScore += 3;
                 break;
         }
+        if (mScore > 20) {
+            mListener.onWarning(mTeamNameTextView.getText().toString());
+        }
+
         mScoreTextView.setText("" + mScore);
 
     }
@@ -78,6 +116,7 @@ public class BasketScoreFragment extends Fragment implements View.OnClickListene
 
     public void setTeamName(String name) {
         mTeamNameTextView.setText(name);
-
     }
+
+
 }
