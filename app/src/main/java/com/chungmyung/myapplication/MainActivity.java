@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import com.chungmyung.myapplication.Adapterview.AdapterViewExamActivity;
 import com.chungmyung.myapplication.fragment.Basket.BasketBallActivity;
-import com.chungmyung.myapplication.fragment.Color.colorActivity;
+import com.chungmyung.myapplication.fragment.Color.ColorActivity;
 import com.chungmyung.myapplication.fragment.Exam.CallbackExamActivity;
 import com.chungmyung.myapplication.fragment.Exam.ExamColorActivity;
 import com.chungmyung.myapplication.fragment.Sliding.SlidingActivity;
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         addItem("생명 주기", "Activity Life cycle", LifeCycleActivity.class);
         addItem("상태 저장", "onSaveInstanceState, onRestoreInstanceState", LifeCycleActivity.class);
         addItem("농구 앱 프래그먼트 버전", "Fragment, Callback", com.chungmyung.myapplication.fragment.Basket.BasketBallActivity.class);
-        addItem("프래그먼트 동적 생성", "코드로 Fragment 생성", colorActivity.class);
+        addItem("프래그먼트 동적 생성", "코드로 Fragment 생성", ColorActivity.class);
         addItem("과제 : 컬러 프래그먼트", "프래그먼트 추가, 제거", ExamColorActivity.class);
         addItem("과제 : 콜백", "액티비티와 프래그먼트 통신", CallbackExamActivity.class);
         addItem("좌우로 슬라이딩", "ViewPager", SlidingActivity.class);

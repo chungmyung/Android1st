@@ -1,6 +1,7 @@
 package com.chungmyung.myapplication;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
@@ -92,7 +94,7 @@ public class CoffeeActivity extends AppCompatActivity {
 //        Toast.makeText(this, "잘되나?" + checkBox.isChecked(), Toast.LENGTH_SHORT).show();
         display();
     }
-
+     // 메뉴 생성
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -105,17 +107,40 @@ public class CoffeeActivity extends AppCompatActivity {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.action_item1:
+                Toast.makeText(this,"메뉴 1 번 표시",Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.action_item2:
+                startActivity(new Intent(this,BasketballActivity.class));
                 return true;
             case R.id.action_item3:
+                startActivity(new Intent(this,ActivityMoveActivity.class));
                 return true;
             case R.id.action_item4:
+                startActivity(new Intent(this, LoginActivity.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    public void order(View view) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        // 보내는 방법 2.//    intent.setAction(Intent.ACTION_SENDTO);
+
+
+        intent.setType("*/*");
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_EMAIL,new String[]{ "mkcjsk@gmail.com","mkcjsk@outlook.kr"});
+        intent.putExtra(Intent.EXTRA_SUBJECT, "주문 입니다!!!");
+        intent.putExtra(Intent.EXTRA_TEXT, mPriceTextView.getText().toString());
+
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+
+
+    }
+
 
 }
 

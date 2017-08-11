@@ -19,6 +19,19 @@
         android:layout_height="wrap_content"
         android:onClick="showWebPage"
         android:text="이동" />
+    <Button
+        android:id="@+id/goback_botton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="goBack"
+        android:text="Back" />
+    <Button
+        android:id="@+id/goforwrd_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="goForward"
+        android:text="Forward" />
+
 
     <WebView
         android:id="@+id/web_view"

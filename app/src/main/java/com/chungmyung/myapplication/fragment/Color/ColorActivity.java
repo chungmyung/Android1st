@@ -7,7 +7,7 @@ import android.view.View;
 
 import com.chungmyung.myapplication.R;
 
-public class colorActivity extends AppCompatActivity {
+public class ColorActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

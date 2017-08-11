@@ -8,14 +8,14 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="myapplication"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -24,9 +24,7 @@
             android:label="커피주문">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
-
                 <data android:mimeType="text/plain" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -52,18 +50,10 @@
         <activity android:name=".Adapterview.Detail_address_Activity" />
         <activity android:name=".LifeCycleActivity" />
         <activity android:name=".fragment.Basket.BasketBallActivity" />
-        <activity android:name=".fragment.Color.colorActivity" />
+        <activity android:name=".fragment.Color.ColorActivity" />
         <activity android:name=".fragment.Exam.ExamColorActivity" />
         <activity android:name=".fragment.Exam.CallbackExamActivity" />
         <activity android:name=".fragment.Sliding.SlidingActivity" />
-        <activity android:name=".Practice.RegisterActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Practice.DepSalesActivity"></activity>
     </application>
-
 </manifest>

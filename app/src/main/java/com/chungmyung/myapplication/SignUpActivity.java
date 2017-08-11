@@ -22,6 +22,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+
         mIdEditText = (EditText) findViewById((R.id.id_edit));
         mPasswordEditText = (EditText) findViewById(R.id.password_edit);
         mPasswordConfirmEditText = (EditText) findViewById(R.id.passwordConfirm_edit);
@@ -71,7 +72,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         return TextUtils.isEmpty(mIdEditText.getText().toString()) ||
                 TextUtils.isEmpty(mPasswordEditText.getText().toString()) ||
                 TextUtils.isEmpty(mPasswordConfirmEditText.getText().toString()) ||
-                TextUtils.isEmpty(mEmailText.getText().toString());    }
+                TextUtils.isEmpty(mEmailText.getText().toString());
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
