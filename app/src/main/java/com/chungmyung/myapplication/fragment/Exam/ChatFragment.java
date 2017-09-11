@@ -69,5 +69,6 @@ public class ChatFragment extends Fragment {
     }
 
     public void sendMessage(String message) {
+        mTextView.setText(message +"\n" + mTextView.getText().toString());
     }
 }

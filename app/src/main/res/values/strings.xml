@@ -2,5 +2,17 @@
     <string name="app_name">My Application</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="buyer">Buyer</string>
+    <string name="toppings">Toppings</string>
+    <string name="cream">WhippingCream</string>
+    <string name="quantity">Quantity</string>
+    <string name="price">Unit Price</string>
+    <string name="order">ORDER</string>
+    <string name="result_price">"$" %1$s</string>
+    <string name="ordered_price"> Amout to be paid</string>
+    <string name="_1_1">1번 프레그먼트 배치1</string>
+    <string name="_2_1">2번 프레그먼트 배치1</string>
+    <string name="item3">Item3</string>
+    <string name="xxxx_xxxx_xxxxx">계좌번호 XXXX-XXXX_XXXXX</string>
 </resources>

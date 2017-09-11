@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-        tools:context="com.chungmyung.myapplication.Adapterview.Detail_address_Activity">
+    tools:context="com.chungmyung.myapplication.Dividedpayment.Member_Activity">
 
 
     <ImageView
@@ -13,19 +13,20 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
-        android:src="@mipmap/ic_launcher"/>
+        android:src="@mipmap/ic_launcher" />
+
     <EditText
         android:id="@+id/name_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="이름"/>
+        android:hint="참석자 이름" />
 
     <EditText
         android:id="@+id/phone_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="전화번호"
-        android:inputType="phone"/>
+        android:inputType="phone" />
 
     <EditText
         android:id="@+id/email_edit"
@@ -33,5 +34,11 @@
         android:layout_height="wrap_content"
         android:hint="이메일"
         android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/divided_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="0원 " />
 
 </LinearLayout>

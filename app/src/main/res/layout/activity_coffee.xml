@@ -20,12 +20,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:hint="주문자" />
+        android:hint="@string/buyer" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Toppings"
+        android:text="@string/toppings"
         android:textAllCaps="true" />
 
     <CheckBox
@@ -36,13 +36,13 @@
         android:onClick="onCheckBoxClicked"
         android:paddingLeft="8dp"
         android:paddingStart="8dp"
-        android:text="휘핑크림"
+        android:text="@string/cream"
         android:textSize="16sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="quantity"
+        android:text="@string/quantity"
         android:textAllCaps="true" />
 
 
@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Price"
+        android:text="@string/price"
         android:textAllCaps="true"
         android:textSize="16sp" />
 
@@ -96,7 +96,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Price"
+        android:text="@string/ordered_price"
         android:textAllCaps="true"/>
 
     <TextView
@@ -104,7 +104,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="0원"
+        android:text="@string/result_price"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold" />
@@ -114,7 +114,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="ORDER"
+        android:text="@string/order"
         android:textSize="16sp" />
 
 </LinearLayout>

@@ -22,7 +22,7 @@ public class BasketballActivity extends AppCompatActivity {
         mScoreaTextView = (TextView) findViewById(R.id.scorea_text);
         mScorebTextView = (TextView) findViewById(R.id.scoreb_text);
 
-
+  //onCreate에서   저장된 상태를 복원 하는 방법
         if (savedInstanceState != null) {
             // 복원
             mScorea = savedInstanceState.getInt("a");
@@ -71,7 +71,7 @@ public class BasketballActivity extends AppCompatActivity {
 //    }
 
     }
-
+  //  화면을 ㅇ돌렸을 때   정보가 날아가지 않고 상태를 저장 복원.
         @Override
         protected void onSaveInstanceState (Bundle outState){
             // 저장

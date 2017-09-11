@@ -46,6 +46,7 @@ public class ExamColorActivity extends AppCompatActivity {
             case R.id.button_3:
                 frame = R.id.frame3;
                 fragment = mFrame3 ;
+                break;
         }
 
 

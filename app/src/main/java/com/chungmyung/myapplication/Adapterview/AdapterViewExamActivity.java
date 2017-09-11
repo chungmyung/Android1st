@@ -21,8 +21,8 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.chungmyung.myapplication.R;
-import com.chungmyung.myapplication.Util.DialogUtil;
 import com.chungmyung.myapplication.Util.SharedPreferenceUtil;
+import com.chungmyung.myapplication.fragment.MyAlertDialogFragment;
 
 import java.util.ArrayList;
 
@@ -60,7 +60,7 @@ public class AdapterViewExamActivity extends AppCompatActivity implements Dialog
         gridView.setAdapter(adapter);
         spinner.setAdapter(adapter);
 
-        //OnItemClick
+        //OnItemClickListener
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             public final String TAG = PeopleAdapter.class.getSimpleName();
@@ -84,13 +84,13 @@ public class AdapterViewExamActivity extends AppCompatActivity implements Dialog
             }
         });
 
-        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(AdapterViewExamActivity.this, "롱 클릭" + position, Toast.LENGTH_SHORT).show();
-                return true;  // 이벤트 소비 제어.  더이상 이벤트가 흘러가지 않는다.
-            }
-        });
+//        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+//            @Override
+//            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+//                Toast.makeText(AdapterViewExamActivity.this, "롱 클릭" + position, Toast.LENGTH_SHORT).show();
+//                return true;  // 이벤트 소비 제어.  더이상 이벤트가 흘러가지 않는다. false로 하면 onItemClik이 같이 작동
+//            }
+//        });
 
         //Context 메뉴 연결
         registerForContextMenu(mListView);
@@ -144,42 +144,66 @@ public class AdapterViewExamActivity extends AppCompatActivity implements Dialog
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
-        final AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+
+        final AdapterView.AdapterContextMenuInfo info
+                = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+
 
         switch (item.getItemId()) {
             case R.id.action_item1:
                 Toast.makeText(this, "action 1", Toast.LENGTH_SHORT).show();
+                showDefaultDialog(info);
                 return true;
 
             case R.id.action_item2:
-                Toast.makeText(this, "action 1", Toast.LENGTH_SHORT).show();
-                showcustomDialog();
+                Toast.makeText(this, "action 2", Toast.LENGTH_SHORT).show();
 
                 return true;
 
             case R.id.action_item3:
-                Toast.makeText(this, "action 2", Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(this, "action 3", Toast.LENGTH_SHORT).show();
+                showCustomDialog();
                 return true;
             default:
                 return super.onContextItemSelected(item);
         }
     }
 
-    private void showcustomDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        View view = getLayoutInflater().inflate(R.layout.diallog_signin, null, false);
+    private void showCustomDialog() {
 
-        builder.setPositiveButton("예", null);
-        builder.setNegativeButton("아니오", null);
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        View view = getLayoutInflater()
+                .inflate(R.layout.diallog_signin, null, false);
+
         builder.setView(view);
-        builder.create().show();
+
+        final AlertDialog dialog = builder.create();
+
+        view.findViewById(R.id.positive_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(AdapterViewExamActivity.this,"잘눌림",Toast.LENGTH_SHORT).show();
+
+                // 다이얼로그 닫기
+                dialog.dismiss();
+            }
+        });
+
+        view.findViewById(R.id.negative_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
     }
 
-    private void showDefaultDialog(final AdapterView.AdapterContextMenuInfo info) {
 
-        DialogUtil.creatAlertDialog(this, new DialogInterface.OnClickListener() {
+    private void showDefaultDialog( final AdapterView.AdapterContextMenuInfo info ) {
+        MyAlertDialogFragment fragment =MyAlertDialogFragment.newInstance(new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 switch (which) {
@@ -193,8 +217,31 @@ public class AdapterViewExamActivity extends AppCompatActivity implements Dialog
                         break;
                 }
             }
-        }).show();
+        });
+        fragment.show(getSupportFragmentManager(),"alert");  // 이전 것은  돌렸을대 내용 지워짐.
+
+
+
+
+
+//        DialogUtil.creatAlertDialog(this, new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                switch (which) {
+//                    case DialogInterface.BUTTON_POSITIVE:
+//                        // 삭제
+//                        mPeopleData.remove(info.position);
+//                        // 업데이트
+//                        mAdapter.notifyDataSetChanged();
+//                        break;
+//                    case DialogInterface.BUTTON_NEGATIVE:
+//                        break;
+//                }
+//            }
+//        }).show();
     }
+
+
 
     @Override
     public void onBackPressed() {

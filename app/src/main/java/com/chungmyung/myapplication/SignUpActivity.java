@@ -40,10 +40,10 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.reset_button:
                 break;
             case R.id.sign_up_button:
-                if (isEditTextEmpty()) {
+                if (isEditTextEmpty()){
                     Toast.makeText(this, "모두 입력해 주셔야 합니다.", Toast.LENGTH_SHORT).show();
                     return;
-                }
+        }
                 if (isInvalidPassword()) {
                     Toast.makeText(this, "비밀번호가 다릅니다.", Toast.LENGTH_SHORT).show();
                     return;
@@ -52,9 +52,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
         String gender = "남자";
         if (mGenderRadioGroup.getCheckedRadioButtonId() == R.id.female_radio_button) {
-            gender = "여자";
-        }
-        //       String gender = ((RadioButton)findViewById((mGenderRadioGroup.getCheckedRadioButtonId())).getTag().toString();
+            gender = "여자";       }  // 성능이 아래 보다 더 좋다 .fVBI 때문.
+        // String gender = ((RadioButton)findViewById((mGenderRadioGroup.getCheckedRadioButtonId())).getTag().toString();
+
         Intent intent = new Intent(SignUpActivity.this, SignUpMessageActivity.class);
         intent.putExtra("id", mIdEditText.getText().toString());
         intent.putExtra("password", mPasswordEditText.getText().toString());

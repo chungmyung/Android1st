@@ -13,14 +13,24 @@
         tools:ignore="HardcodedText" />
     <item
         android:id="@+id/action_item2"
+        android:icon="?attr/actionModeShareDrawable"
         android:title="Item2"
         app:showAsAction="ifRoom"
         tools:ignore="HardcodedText" />
     <item
         android:id="@+id/action_item3"
-        android:title="Item3" />
+        android:title="item3"
+        app:showAsAction="ifRoom"
+        tools:ignore="HardcodedText" />
     <item
         android:id="@+id/action_item4"
-        android:title="Item4" />
+        android:title="Item4"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item android:title="소재목1" />
+            <item android:title="소재목2" />
+            <item android:title="소재목3" />
+        </menu>
+    </item>
 
 </menu>

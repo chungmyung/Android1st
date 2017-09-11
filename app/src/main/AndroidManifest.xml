@@ -8,14 +8,14 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="myapplication"
+        android:label="My Application"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -24,7 +24,9 @@
             android:label="커피주문">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
+
                 <data android:mimeType="text/plain" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -32,7 +34,14 @@
             android:name=".BasketballActivity"
             android:label="농구 점수" />
         <activity android:name=".ActivityMoveActivity" />
-        <activity android:name=".TargetActivity" />
+        <activity
+            android:name=".TargetActivity"
+            android:parentActivityName=".ActivityMoveActivity" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".ActivityMoveActivity" />
+
         <activity
             android:name=".LoginActivity"
             android:label="로그인" />
@@ -54,6 +63,22 @@
         <activity android:name=".fragment.Exam.ExamColorActivity" />
         <activity android:name=".fragment.Exam.CallbackExamActivity" />
         <activity android:name=".fragment.Sliding.SlidingActivity" />
+        <activity android:name=".Flexiable_UI.NewsActivity" />
+        <activity android:name=".Dividedpayment.Dutch_Payment_Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Dividedpayment.Result_divided_Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Dividedpayment.Member_Activity"></activity>
     </application>
+
 </manifest>

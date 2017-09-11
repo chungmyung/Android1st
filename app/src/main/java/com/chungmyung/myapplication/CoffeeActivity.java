@@ -47,7 +47,12 @@ public class CoffeeActivity extends AppCompatActivity {
         mNameEditText = (EditText) findViewById(R.id.name_edit);
 
 
-//        mQuantityTextView.setText(String.valueOf(mQuantity));
+//        모든 리소스는 내부적으로 int임으로 숫자를 인수에 직접쓰면 안된다.
+//        mQuantityTextView.setText("10"); // 직접 TextView에 있는 숫자를 바꾼는 code
+//        mQuantityTextView.setText(String.valueOf(mQuantity));  택스트 를  글자로 바꾸는 방법
+//        mQuantityTextView.setText("" + mQuantity);  가장 쉬운 방법,문자열과 숫자가 같이 나오면 문자열로 바뀜
+
+
         display();
 
         if (getIntent() != null) {
@@ -65,6 +70,8 @@ public class CoffeeActivity extends AppCompatActivity {
         message += "\n휘핑그림 추가 여부 : " + mWippedCreamCheckBox.isChecked();
         message += "\n 갯수 : " + mQuantity;
         message += "\n 가격 : " + mFormat.format(mQuantity * COFFEE_PRICE) + "원";
+        message += "\n 가격 : " + String.format(getString(R.string.result_price),
+                mFormat.format(mQuantity * COFFEE_PRICE) );
 
         mPriceTextView.setText(message);
     }
@@ -128,7 +135,7 @@ public class CoffeeActivity extends AppCompatActivity {
         // 보내는 방법 2.//    intent.setAction(Intent.ACTION_SENDTO);
 
 
-        intent.setType("*/*");
+       // intent.setType("text/plain"); 필요 없는 부분
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this
         intent.putExtra(Intent.EXTRA_EMAIL,new String[]{ "mkcjsk@gmail.com","mkcjsk@outlook.kr"});
         intent.putExtra(Intent.EXTRA_SUBJECT, "주문 입니다!!!");

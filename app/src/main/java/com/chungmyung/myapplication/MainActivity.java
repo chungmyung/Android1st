@@ -10,6 +10,7 @@ import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
 import com.chungmyung.myapplication.Adapterview.AdapterViewExamActivity;
+import com.chungmyung.myapplication.Flexiable_UI.NewsActivity;
 import com.chungmyung.myapplication.fragment.Basket.BasketBallActivity;
 import com.chungmyung.myapplication.fragment.Color.ColorActivity;
 import com.chungmyung.myapplication.fragment.Exam.CallbackExamActivity;
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         mDataList = new ArrayList<>();
 
-        addItem("커피 앱", "Activity 의 기본, 암시적 인텐트, 옵션 메뉴", CoffeeActivity.class);
+        addItem("커피 앱", "Activity 의 기본, 암시적 인텐트, 옵션 메뉴,리소스 분기", CoffeeActivity.class);
         addItem("농구 점수 계산", "상태 저장", BasketBallActivity.class);
         addItem("화면 이동 예제", "데이터 주거니 받거니", ActivityMoveActivity.class);
         addItem("로그인", "데이터 주거니 받거니 복습", LoginActivity.class);
@@ -56,10 +57,11 @@ public class MainActivity extends AppCompatActivity {
         addItem("생명 주기", "Activity Life cycle", LifeCycleActivity.class);
         addItem("상태 저장", "onSaveInstanceState, onRestoreInstanceState", LifeCycleActivity.class);
         addItem("농구 앱 프래그먼트 버전", "Fragment, Callback", com.chungmyung.myapplication.fragment.Basket.BasketBallActivity.class);
-        addItem("프래그먼트 동적 생성", "코드로 Fragment 생성", ColorActivity.class);
+        addItem("프래그먼트 동적 생성", "코드로 Fragment 생성, 리소스 분기", ColorActivity.class);
         addItem("과제 : 컬러 프래그먼트", "프래그먼트 추가, 제거", ExamColorActivity.class);
         addItem("과제 : 콜백", "액티비티와 프래그먼트 통신", CallbackExamActivity.class);
         addItem("좌우로 슬라이딩", "ViewPager", SlidingActivity.class);
+        addItem("유연한 UI 구성 ", "ListFragment", NewsActivity.class);
 
         // 순서 뒤집기
         Collections.reverse(mDataList);

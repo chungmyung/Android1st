@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.chungmyung.myapplication.Dividedpayment.Dutch_Payment_Activity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="이벤트 명, 총 소요 금액, 참가인원수 입력해 주세요"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/eventName_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Event Name" />
+
+    <EditText
+        android:id="@+id/totalAmount_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint=" 총 소요 금액"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/totalSupportAmount_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" 총 후원 금액(고정 분담금액 포함)"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/numAttendee_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="참가 인원(금액 분담자) 수" />
+
+    <EditText
+        android:id="@+id/numSupporter_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="후원자(고정 분담자 포함) 수 " />
+
+    <Button
+        android:id="@+id/act_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:text=" 처 리 "
+        android:textSize="23dp" />
+
+
+</LinearLayout>
+
+

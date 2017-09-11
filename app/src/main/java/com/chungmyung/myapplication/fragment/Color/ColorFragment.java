@@ -27,7 +27,7 @@ public class ColorFragment extends Fragment {
     public static ColorFragment newInstance(int color) {
 
         Bundle args = new Bundle();
-        args.putInt("color",color);
+        args.putInt("color", color);
 
         ColorFragment fragment = new ColorFragment();
         fragment.setArguments(args);
@@ -41,7 +41,7 @@ public class ColorFragment extends Fragment {
         int g = new Random().nextInt(256);
         int b = new Random().nextInt(256);
         int color = Color.argb(255, r, g, b);
-        args.putInt("color",color);
+        args.putInt("color", color);
 
         ColorFragment fragment = new ColorFragment();
         fragment.setArguments(args);
@@ -67,10 +67,14 @@ public class ColorFragment extends Fragment {
 //        int activity_color = Color.argb(255, r, g, b);
 
         // Acitivity에서 넘긴 것을  받을땐 getArgument로 받는다.
-       int color = getArguments().getInt("color");
+        int color = getArguments().getInt("color");
         view.setBackgroundColor(color);
     }
-
-
+//     //외부에서 색깔을 정하는 메소드.
+//    허나 위쪽 newInstance()   ; factory design pattern 생성으로
+//    동적사용이 가능해져서 필요 없는 code가 됨.
+//    public void setColor(int color) {
+//        getView().setBackgroundColor(color);
+//    }
 
 }

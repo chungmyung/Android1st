@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context="com.chungmyung.myapplication.Dividedpayment.Result_divided_Activity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="[분담금 계산 결과]"
+        android:textSize="16dp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/message_text_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/dividentpersonR_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="인당 분담금"
+         />
+
+    <EditText
+        android:id="@+id/bankR_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="입금은행  XXXXX"
+        android:textSize="8dp" />
+
+    <EditText
+        android:id="@+id/accountname_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="예금주"
+        android:textSize="8dp" />
+
+    <EditText
+        android:id="@+id/accountnumR_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="계좌 번호  XXX-XX-XXXX"
+        android:textSize="8dp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:text="송금을 부탁드립니다." />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="후원자 (고정분담자) 명단 내용을 입력해 주세요"
+        android:textSize="8dp"
+        tools:ignore="HardcodedText" />
+
+
+    <ListView
+        android:id="@+id/supporter_list"
+        android:layout_width="match_parent"
+        android:layout_height="104dp"
+        tools:listitem="@layout/activity_supporterlist_item" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" 참석자 (분담자) 명단을 입력해 주세요"
+        android:textSize="8dp"
+        tools:ignore="HardcodedText" />
+
+    <ListView
+        android:id="@+id/attendee_list"
+        android:layout_width="match_parent"
+        android:layout_height="154dp"
+        tools:listitem="@layout/activity_attendee_list" />
+
+
+
+    <Button
+        android:id="@+id/confirmation_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:text="확인" />
+
+</LinearLayout>
+
+
+
+

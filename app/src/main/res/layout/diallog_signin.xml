@@ -7,7 +7,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="128dp"
         android:background="#FFFFBB33"
         android:contentDescription="@string/app_name"
         android:scaleType="centerCrop"
@@ -49,18 +49,19 @@
             android:background="#62b2e4"
             android:padding="8dp"
             android:text="예" />
+
         <View
             android:layout_width="8dp"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
 
 
         <Button
-            android:padding="8dp"
             android:id="@+id/negative_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#62b2e4"
+            android:padding="8dp"
             android:text="아니오" />
 
 

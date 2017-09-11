@@ -19,11 +19,11 @@ public class WebViewActivity extends AppCompatActivity {
         mWebView = (WebView) findViewById(R.id.web_view);
         mUrlEditText = (EditText) findViewById(R.id.url_edit);
 
+        // 요거 해 줘야 된다
+        mWebView.setWebViewClient(new WebViewClient());
         // Javascript 사용하는 페이지를 볼 수 있게
         mWebView.getSettings().setJavaScriptEnabled(true);
 
-        // 요거 해 줘야 된다
-        mWebView.setWebViewClient(new WebViewClient());
     }
 
     public void showWebPage(View view) {

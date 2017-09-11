@@ -11,11 +11,12 @@ import android.widget.Button;
 
 public class LifeCycleActivity extends AppCompatActivity {
 
-    private int mNum = 0 ;
-    private Button mButton ;
+    private int mNum = 0;
+    private Button mButton;
 
     private static final String TAG = LifeCycleActivity.class.getSimpleName();
 
+    //액티비티가 실행 될때
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,22 +61,23 @@ public class LifeCycleActivity extends AppCompatActivity {
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = settings.edit();
         editor.putInt("number", mNum);
-
     }
-  // 정지, 홈키를 눌렀을대 최종 위치. 화면에서 안뵈게 되면.
+
+    // 정지, 홈키를 눌렀을대 최종 위치. 화면에서 한 동안  안뵈게 되면 자동으로 종료되어 onCreate로 감.
+    // 앱실행 중  전화가 왔을 경우,  그 앱은 onPause 또는 onStop0에서  전화가 끝나면 다시 onCreate되어 자동실행.
+
     @Override
     protected void onStop() {
         super.onStop();
         Log.d(TAG, "onStop: ");
     }
 
-    // Actitity가 종료 될때
+    // Activity가 종료 될때
     @Override
     protected void onDestroy() {
         super.onDestroy();
         // 메모리 해제
         Log.d(TAG, "onDestroy: ");
-
     }
 
     public void showDialog(View view) {
@@ -99,6 +101,7 @@ public class LifeCycleActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
     }
 
+    // onStart 와  onResume 사이에서 복원됨
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);

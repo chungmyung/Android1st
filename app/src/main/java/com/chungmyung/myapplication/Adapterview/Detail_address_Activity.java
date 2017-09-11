@@ -18,7 +18,7 @@ public class Detail_address_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_address_);
+        setContentView(R.layout.activity_detail_address);
 
         mNameEditText = (EditText) findViewById(R.id.name_edit);
         mPhoneEditText = (EditText) findViewById(R.id.phone_edit);

@@ -24,6 +24,7 @@ public class SharedPreferenceUtil {
     public static String restoreWeather (Context context) {
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
 
+
         return settings.getString("weather", "맑음") ;
     }
 }

@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyApplication.iml" filepath="$PROJECT_DIR$/MyApplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/broadcastreciever/broadcastreciever.iml" filepath="$PROJECT_DIR$/broadcastreciever/broadcastreciever.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cursoproviderglide/cursoproviderglide.iml" filepath="$PROJECT_DIR$/cursoproviderglide/cursoproviderglide.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ndivident/ndivident.iml" filepath="$PROJECT_DIR$/ndivident/ndivident.iml" />
     </modules>
   </component>
 </project>
