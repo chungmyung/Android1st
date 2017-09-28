@@ -63,9 +63,6 @@ public class MainActivity extends AppCompatActivity {
                 loadPhoto();
             }
         }
-
-
-
     }
 
     private void loadPhoto() {
